@@ -1,0 +1,272 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* ----- GENERAL ----- */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+}
+
+/* STRIP */
+.side-strip {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 70px;
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    z-index: 999;
+}
+
+.strip-logo {
+    width: 45px;
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.bottom-icons i {
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background: #0d0d0d;
+    padding: 20px 15px;
+    color: white;
+    transition: 0.4s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+/* CLOSE BUTTON */
+.close-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-btn {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* LINKS */
+.links {
+    margin-top: 40px;
+    list-style: none;
+    padding: 0;
+}
+
+.links li {
+    margin: 10px 0;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    position: absolute;
+    bottom: 25px;
+}
+
+.social i {
+    margin-right: 10px;
+}
+
+.footer p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+
+.image-wrrpr{
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+/* ****************************************END-FOOTER *******************************************/
+/* ****************************************SRSTR-SERACH *******************************************/
+.layr-imge{
+
+    width: 100%;
+    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.74);
+    text-align: center;
+    transform: translateY(100%);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    
+}
+
+
+
+
+.image-wrrpr:hover .layr-imge{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#serchsection input{
+    width: 40%;
+}
+
+#serchsection input::placeholder{
+    color: #626b72;
+   
+}
+
+.ineir-content ul li{
+
+    background-color: #CFF4FC;
+    margin-left: 10px;
+    padding: 5px;
+    list-style: none;
+    border-radius: 10px;
+    color: #2E7381;
+   
+}
+
+
+#liyrsection{
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+
+
+#icon{
+      filter: invert(100%) sepia(0%) saturate(0%) brightness(200%) contrast(100%);
+    font-size: 100px !important;
+    color: wheat;
+}
+
+
+#ContactsSection input{
+    background: white !important;
+    color: black !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nav-tab{
+    background-color: #0D0D0D;
+    width: 240px;
+}
+.logo{
+    width: 50px;
+}
+
+i{
+    cursor: pointer;
+}
+
+.meal-layer{
+    width: 100%;
+    height: 100%;
+    background-color: #f9f6f6ca;
+    top: 100%;
+    transition: .5s;
+}
+
+.meal:hover .meal-layer{
+    top: 0;
+}
+
+.side-nav-menu{
+    z-index: 99;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.alert{
+    width: fit-content;
+}
+
+.spinner{
+    z-index: 999;
+    display: flex;
+}
+
+.inner{
+    position: absolute;
+    z-index: 9;
+    background-color: #19191a;
+    display: flex;
+}
+
+
+.links{
+  color: #fff;
+}
+
+.footer{
+  color: #fff;
+}
+
+.icons{
+  color: #fff;
+}
+
+
