@@ -99,8 +99,6 @@ $(".side-nav-menu i.open-close-icon").click(() => {
 
 serchName.addEventListener("input" ,  ()=> {
 
-
-  
 let male =serchName.value
 getresipesName(male)
 
@@ -292,11 +290,14 @@ function dideilsId(dataId){
   document.getElementById("rowDataHome").innerHTML = "";
 document.getElementById("rowCategories").innerHTML = "";
   document.getElementById("rowDataCategoriesMeals").innerHTML = "";
+
+  
 melaImge.src =  dataId.meals[0].strMealThumb;
 mealNama.innerHTML=`${dataId.meals[0].strMeal}`
 melaInstructions.innerHTML=`${dataId.meals[0].strInstructions}`
 malaAree.innerHTML+=`${dataId.meals[0].strArea}`
 melaCotegory.innerHTML+=`${dataId.meals[0].strCategory}`
+
 ingredentslist.innerHTML = "";
 let ingred = "";
 for (let i = 1; i <= 20; i++) {
