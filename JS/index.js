@@ -621,7 +621,7 @@ for (let i = 0; i < arr.length; i++) {
   cartona+=`
   <div class="col-md-3 text-center">
     <div class="area-box" onclick="dideilsArea('${arr[i].strArea}')">
-      <i class="fa-solid fa-house fs-6 display-1 p-5 text-white bg-white" id="icon"></i>
+      <i class="fa-solid fa-house fs-6 display-1 p-5 text-white " id="icon"></i>
     
        <h3 class="ms-5 text-white fw-bold">${arr[i].strArea}</h3>
     </div>
