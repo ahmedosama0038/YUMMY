@@ -39,6 +39,17 @@ const linkContact =document.getElementById("linkContact");
 
 
 
+function hideAllSections() {
+  liyrsectionSh.classList.add("d-none");
+  secicionsidebar.classList.add("d-none");
+  sectionHome.classList.add("d-none");
+  sectionCategories.classList.add("d-none");
+  AreaSection.classList.add("d-none");
+  ContactsSection.classList.add("d-none");
+  IngredientsSection.classList.add("d-none");
+  listCategoriesMeals.classList.add("d-none");
+}
+
 
 // /////////////////////////////////////************/////////////////////////////////////////////
 // /////////////////////////////////////START-SIEDBAAR/////////////////////////////////////////////
@@ -471,66 +482,34 @@ sectionHome.classList.add("d-none");
 }) 
 
 // /////////////////////////////////////END Categories/////////////////////////////////////////////
-
-function informationSerch(){
+function informationSerch() {
+  hideAllSections();
   liyrsectionSh.classList.remove("d-none");
-  secicionsidebar.classList.add("d-none");
-  sectionHome.classList.add("d-none");
-  sectionCategories.classList.add("d-none");
-  AreaSection.classList.add("d-none");
-  ContactsSection.classList.add("d-none");
-  IngredientsSection.classList.add("d-none");
-  
+}
 
-  }
-
-function informationCategories(){
+function informationCategories() {
+  hideAllSections();
   listCategoriesMeals.classList.remove("d-none");
-  sectionCategories.classList.add("d-none");
-  AreaSection.classList.add("d-none");
-  secicionsidebar.classList.add("d-none");
-  sectionHome.classList.add("d-none");
-  ContactsSection.classList.add("d-none");
-  IngredientsSection.classList.add("d-none");
-
 }
 
-function showCategories(){
+
+
+function showCategories() {
+  hideAllSections();
   sectionCategories.classList.remove("d-none");
-   IngredientsSection.classList.add("d-none");
-  liyrsectionSh.classList.add("d-none");
-  secicionsidebar.classList.add("d-none");
-  sectionHome.classList.add("d-none");
-  AreaSection.classList.add("d-none");
-  listCategoriesMeals.classList.add("d-none");
-  ContactsSection.classList.add("d-none");
- 
-
-
 }
 
-function showMaleSerch(){
+
+function showMaleSerch() {
+  hideAllSections();
   secicionsidebar.classList.remove("d-none");
-  liyrsectionSh.classList.add("d-none");
-  sectionHome.classList.add("d-none");
-  sectionCategories.classList.add("d-none");
-  IngredientsSection.classList.add("d-none");
-  ContactsSection.classList.add("d-none");
-  listCategoriesMeals.classList.add("d-none");
-  
 }
 
-function showHome(){
+function showHome() {
+  hideAllSections();
   sectionHome.classList.remove("d-none");
-  sectionCategories.classList.add("d-none");
-  liyrsectionSh.classList.add("d-none");
-  secicionsidebar.classList.add("d-none");
-  AreaSection.classList.add("d-none");
-  ContactsSection.classList.add("d-none");
-  IngredientsSection.classList.add("d-none");
-  listCategoriesMeals.classList.add("d-none");
-
 }
+
 
 showHome()
 
@@ -638,31 +617,16 @@ linkArea.addEventListener("click" , () => {
   showArea()
 // informationArea()
    })
-
-  function informationArea(){
-    liyrsectionSh.classList.add("d-none");
-    secicionsidebar.classList.add("d-none");
-    sectionHome.classList.add("d-none");
-    sectionCategories.classList.add("d-none");
-    AreaSection.classList.add("d-none");
-   ContactsSection.classList.add("d-none");
-    IngredientsSection.classList.add("d-none");
+function informationArea() {
+  hideAllSections();
   listCategoriesMeals.classList.remove("d-none");
-
-  }
-
-function showArea(){
-
-AreaSection.classList.remove("d-none");
-  sectionCategories.classList.add("d-none");
-  secicionsidebar.classList.add("d-none");
-  liyrsectionSh.classList.add("d-none");
-  sectionHome.classList.add("d-none");
-  listCategoriesMeals.classList.add("d-none");
-  IngredientsSection.classList.add("d-none");
-  ContactsSection.classList.add("d-none");
-  
 }
+
+function showArea() {
+  hideAllSections();
+  AreaSection.classList.remove("d-none");
+}
+
 // /////////////////////////////////////END-AREA/////////////////////////////////////////////
 
 // /////////////////////////////////////START-IngredientsSection/////////////////////////////////////////////
@@ -674,7 +638,7 @@ try {
  const res = await    fetch(`https://www.themealdb.com/api/json/v1/1/list.php?i=list`)
 
    if (!res.ok) {
-console.log(`HTTP error! status: ${respins.status}`);
+console.log(`HTTP error! status: ${res.status}`);
 return
 
 }
@@ -781,26 +745,18 @@ if (data.meals) {
  }
 
     }
-
-function showIngredients(){
+function showIngredients() {
+  hideAllSections();
   IngredientsSection.classList.remove("d-none");
-  AreaSection.classList.add("d-none");
-  sectionCategories.classList.add("d-none");
-  secicionsidebar.classList.add("d-none");
-  liyrsectionSh.classList.add("d-none");
-  sectionHome.classList.add("d-none");
-  ContactsSection.classList.add("d-none");
 }
-function informationIngredients(){
+
+
+function informationIngredients() {
+  hideAllSections();
   liyrsectionSh.classList.remove("d-none");
-  IngredientsSection.classList.add("d-none");
-  secicionsidebar.classList.add("d-none");
-  sectionHome.classList.add("d-none");
-  sectionCategories.classList.add("d-none");
-  AreaSection.classList.add("d-none");
-  ContactsSection.classList.add("d-none");
   listCategoriesMeals.classList.remove("d-none");
 }
+
 
   linkIngredients.addEventListener("click" , () => {
     showIngredients()
@@ -966,20 +922,11 @@ linkContact.addEventListener("click" , () => {
 // informationArea()
    }
     );
-
-
-function showContacts(){
+function showContacts() {
+  hideAllSections();
   ContactsSection.classList.remove("d-none");
-  AreaSection.classList.add("d-none");
-  sectionCategories.classList.add("d-none");
-  secicionsidebar.classList.add("d-none");
-  liyrsectionSh.classList.add("d-none");
-  sectionHome.classList.add("d-none");
-  listCategoriesMeals.classList.add("d-none");
-  IngredientsSection.classList.add("d-none");
-  
-
 }
+
 // /////////////////////////////////////end-ContactsSection/////////////////////////////////////////////
    
 
