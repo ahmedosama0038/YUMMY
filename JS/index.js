@@ -29,7 +29,6 @@ const AreaSection =document.getElementById("AreaSection");
 const IngredientsSection =document.getElementById("IngredientsSection");
 const ContactsSection =document.getElementById("ContactsSection");
 const nameContact =document.getElementById("nameContact");
-
 const emailContact =document.getElementById("emailContact");
 const phoneContact =document.getElementById("phoneContact");
 const ageContact =document.getElementById("ageContact");
@@ -104,8 +103,6 @@ getresipesName(male)
 
 })
 
-
-
 serchLetter.addEventListener("input" ,  () =>{
 
   let maleLeteer = serchLetter.value.trim();
@@ -113,11 +110,6 @@ if (maleLeteer.length === 1) {
     getReispesLetter(maleLeteer)
 }
 })
-
-
-
-
-
  async function getresipesName(nama){
 
 try {
@@ -144,18 +136,10 @@ if (data.meals) {
 } catch (error) {
 
   console.log("error :" , error);
-  
-  
 }
     
-
   }
-
-
 getresipesName( '')
-
-
-  
 
 async function getReispesLetter(letter){
 
@@ -194,12 +178,6 @@ if(data.meals){
     
 }
 
-
-
-
-
-
-
 function diasplayData(arr){
  let cartona =""
 
@@ -234,9 +212,6 @@ function diasplayData(arr){
 
 }
 
-
-
-
  async function dideils(id){
 
 try {
@@ -270,17 +245,12 @@ dideilsId(data)
 }
     
   }
-
-
+getReispesLetter('')
 // /////////////////////////////////////END-SEARCH/////////////////////////////////////////////
 // //////////////////////////////////// STARTDITIELS-DATA ALL/////////////////////////////////////////////
 
 function dideilsId(dataId){
-
-
-
   liyrsectionSh.classList.remove("d-none");
-
   sectionCategories.classList.add("d-none");
   secicionsidebar.classList.add("d-none");
   sectionHome.classList.add("d-none");
@@ -320,7 +290,6 @@ informationSerch()
 
 
 }
-
 linlSarch.addEventListener("click" , () => {
 
    showMaleSerch()
@@ -372,10 +341,7 @@ return
 
 }
 
-
-
 getCategories()
-
 
 function displayCategories(arr){
 
@@ -499,15 +465,12 @@ sectionHome.classList.add("d-none");
 
 }
 
-
    linkCatgreies.addEventListener("click" , () => {
     showCategories()
 
 }) 
 
-
 // /////////////////////////////////////END Categories/////////////////////////////////////////////
-
 
 function informationSerch(){
   liyrsectionSh.classList.remove("d-none");
@@ -607,11 +570,7 @@ displayArea(data.meals)
 }
 
 }
-
-
-
 getArea()
-
 
 function displayArea(arr){
 let cartona =""
@@ -640,12 +599,9 @@ document.getElementById("rowArea").innerHTML=cartona;
 
 }
 
-
   async function dideilsArea( areaName  ){
 try {
   
-
-
     const respins = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${areaName}`)
     if(!respins.ok){
       console.log(`HTTP error! status: ${respins.status}`);
@@ -678,13 +634,10 @@ if(data.meals){
 
   }
 
-
 linkArea.addEventListener("click" , () => {
   showArea()
 // informationArea()
    })
-
-// /////////////////////////////////////START-AREA/////////////////////////////////////////////
 
   function informationArea(){
     liyrsectionSh.classList.add("d-none");
@@ -696,12 +649,7 @@ linkArea.addEventListener("click" , () => {
     IngredientsSection.classList.add("d-none");
   listCategoriesMeals.classList.remove("d-none");
 
-  
-
-
-
   }
-
 
 function showArea(){
 
@@ -713,11 +661,9 @@ AreaSection.classList.remove("d-none");
   listCategoriesMeals.classList.add("d-none");
   IngredientsSection.classList.add("d-none");
   ContactsSection.classList.add("d-none");
-
-
   
 }
-
+// /////////////////////////////////////END-AREA/////////////////////////////////////////////
 
 // /////////////////////////////////////START-IngredientsSection/////////////////////////////////////////////
 
@@ -759,8 +705,6 @@ if(data.meals){
  
   }
   
-
-  
   getIngredients()
     
 
@@ -795,8 +739,6 @@ function displayIngredients(arr){
   document.getElementById("rowIngredients").innerHTML=cartona;
 
 }
-
-
 
  async function dideilsIngredients( ingredientName  ){
 
@@ -840,9 +782,6 @@ if (data.meals) {
 
     }
 
-
-
-
 function showIngredients(){
   IngredientsSection.classList.remove("d-none");
   AreaSection.classList.add("d-none");
@@ -852,7 +791,6 @@ function showIngredients(){
   sectionHome.classList.add("d-none");
   ContactsSection.classList.add("d-none");
 }
-
 function informationIngredients(){
   liyrsectionSh.classList.remove("d-none");
   IngredientsSection.classList.add("d-none");
@@ -864,9 +802,6 @@ function informationIngredients(){
   listCategoriesMeals.classList.remove("d-none");
 }
 
-
-
-
   linkIngredients.addEventListener("click" , () => {
     showIngredients()
     
@@ -876,8 +811,6 @@ function informationIngredients(){
 
 // /////////////////////////////////////END-IngredientsSection/////////////////////////////////////////////
 // /////////////////////////////////////START-ContactsSection/////////////////////////////////////////////
-
-
 
 function usernameValid(){
   let regex = /^[A-Za-z][A-Za-z0-9._]{3,19}$/;
@@ -896,8 +829,6 @@ if( regex.test(nameContact.value.trim()) == true ){
 }
 
 }
-
-
 
 function emailValid(){
   let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -974,9 +905,6 @@ if( pass2Contact.value.trim() === passContact.value.trim() ){
     }
 }
 
-
-
-
 nameContact.addEventListener("input", function () {
   usernameValid();
 });
@@ -1000,8 +928,6 @@ pass2Contact.addEventListener("input", function () {
   pass2Valid();
 });
 
-
-
 function validateForm() {
   if (usernameValid() && emailValid() && phoneValid() &&  ageValid() &&  passValid()  && pass2Valid()== true) {
     btnContact.classList.remove("disabled");
@@ -1022,10 +948,6 @@ ageContact.addEventListener("input", validateForm);
 passContact.addEventListener("input", validateForm);
 pass2Contact.addEventListener("input", validateForm);
 
-
-
-
-
  btnContact.addEventListener("click", function (e) {
   e.preventDefault();
  if (validateForm()== true) {
@@ -1038,9 +960,6 @@ pass2Contact.addEventListener("input", validateForm);
 
  }
 });
-
-
-
 
 linkContact.addEventListener("click" , () => {
   showContacts()
